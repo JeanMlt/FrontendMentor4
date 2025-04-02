@@ -1,0 +1,442 @@
+/* Font imports for Plus Jakarta Sans */
+@font-face {
+    font-family:Plus-Jakarta-Sans-Bold;
+    src: url('assets/fonts/static/PlusJakartaSans-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: bold;
+    font-display: swap;
+  }
+  
+@font-face {
+font-family:Plus-Jakarta-Sans-Medium;
+src: url('assets/fonts/static/PlusJakartaSans-Medium.ttf') format('truetype');
+font-weight: 500;
+font-style: normal;
+font-display: swap;
+}
+
+
+:root {
+/* Base color palette using HSL values */
+--color-pure-white: hsl(0, 0%, 100%);
+--color-light-blue: hsl(202, 86%, 94%);
+--color-medium-blue: hsl(203, 41%, 72%);
+--color-neutral-blue: hsl(200, 26%, 54%);
+--color-dark-blue: hsl(200, 24%, 40%);
+--color-deep-navy: hsl(202, 55%, 16%);
+--color-yellow-green :#d8dc2f;
+}
+
+body,html{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height:100%;
+    background-color: var(--color-light-blue);
+    
+}
+
+#calculator-container{
+  display: flex;
+  flex-direction: row;
+  background-color: var(--color-pure-white);
+  border-radius: 20px;
+  max-width: 1000px;
+  width:100%;
+  box-sizing: border-box;
+  
+}
+#input-section{
+    
+    flex: 0 0 50%;
+    width: 50%; 
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    padding: 40px 
+  
+}
+#header-section{
+    display: inline-flex;
+    flex-direction: row;
+    padding:0px;
+    justify-content:space-between;
+    margin-bottom:35px;
+}
+
+#header-section h2{
+    font-family: 'Plus-Jakarta-Sans-Bold';
+    font-size: 25;
+    font-style: bold;
+    margin:0px;
+    color:var(--color-deep-navy);
+    
+}
+
+#header-section button{
+    background: none;
+    border: none;
+    color:var(--color-dark-blue);
+    text-decoration: underline;
+}
+
+
+
+.input-group{
+    font-family: "Plus-Jakarta-Sans-Medium";
+    margin-bottom:20px;
+   
+}
+
+.input-group label{
+    font-size:13px;
+    font-family: "Plus-Jakarta-Sans-Medium";
+    color: var(--color-dark-blue)
+    
+}
+
+.input-group .input-style{
+    display: flex;
+    flex-direction: row;
+    height:40px;
+    border-width:1px;
+    border-color: var(--color-dark-blue);
+    border-style: solid;
+    border-radius: 5px;
+    margin-top: 5px;
+    
+}
+
+.input-group .input-style span{
+    display:flex;
+    width:auto;
+    align-items: center;
+    text-align: center; 
+    padding-left:15px;
+    padding-right:15px;
+    background-color: var(--color-light-blue);
+    border-radius:4px;
+    flex-shrink: 0;
+    font-family: "Plus-Jakarta-Sans-Bold";
+    font-size:13px;
+    color:var(--color-dark-blue);
+}
+
+.input-group .input-style input{
+    font-size:15px;
+    font-family: "Plus-Jakarta-Sans-Bold";
+    color:var(--color-deep-navy);
+    padding-left:15px;
+    width:90%;
+    border: none;
+    border-radius:4px;
+}
+
+
+
+.input-row{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+}
+
+.input-row .input-group{
+    flex: 0 0 auto; /* Don't grow, don't shrink, respect width */
+    width:45%; /* Replace x with your desired percentage */
+
+}
+
+
+.input-group-mortgage{
+    display:flex;
+    flex-direction: column;
+    margin-bottom:40px;
+}
+
+.input-group-mortgage label{
+    font-size:13px;
+    font-family: "Plus-Jakarta-Sans-Medium";
+    color: var(--color-dark-blue)
+}
+
+.input-group-mortgage .radio-option{
+    font-family: "Plus-Jakarta-Sans-Bold";
+    align-content: center;
+    height:40px;
+    border-width:1px;
+    border-color: var(--color-dark-blue);
+    border-style: solid;
+    border-radius: 5px;
+    margin-top: 10px;
+    background-color: white;
+}
+
+.selected{
+    border-color: var(--color-yellow-green) !important;
+    background-color: #fbff0d12 !important;
+}
+
+.input-group-mortgage .radio-option label{
+    font-family: "Plus-Jakarta-Sans-Bold";
+    padding-left: 20px;
+    font-size: 15px;
+}
+
+
+
+#calculate-button{
+    display: flex;
+    font-family: "Plus-Jakarta-Sans-Bold";
+    color: var(--color-deep-navy);
+    width:60%;
+    height:40px;
+    border:none;
+    border-radius: 20px;
+    background-color: var(--color-yellow-green);
+    align-items: center;
+    justify-content: center;
+}
+#calculate-button:hover{
+   background-color: #fbff00;
+}
+
+
+
+#results-section{
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+    padding:20px;
+    background-color: var(--color-deep-navy);
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 80px;
+    box-sizing: border-box;
+    width:auto;
+}
+#results-section .empty-content{
+    display: flex;
+    flex-direction:column;
+    align-content: center;
+    align-items: center;
+}
+
+#results-section.empty-content .display{
+    display:none !important;
+}
+
+#results-section .empty-content h3{
+    display:flex;
+    color:white;
+    font-family: 'Plus-Jakarta-Sans-Bold';
+}
+#results-section .empty-content p{
+    display:flex;
+    color:white;
+    font-family: 'Plus-Jakarta-Sans-Medium';
+    font-size:15px;
+    text-align: center;
+}
+ 
+input:focus {
+    outline: none;
+    border-color: inherit;
+    border-width: inherit;
+    border-style: inherit;
+    box-shadow: none;
+    color: inherit;
+    background-color: inherit;
+    transition: none;
+    cursor:pointer;
+  }
+
+.input-with-pounds:focus-within,
+.input-with-percent:focus-within,
+.input-with-unit:focus-within
+{
+    border-color: var(--color-yellow-green);
+}
+
+
+.input-with-pounds:hover,
+.input-with-percent:hover,
+.input-with-unit:hover,
+.radio-option:hover 
+ {
+    cursor:pointer !important;
+}
+
+
+.input-with-pounds:focus-within span,
+.input-with-percent:focus-within span,
+.input-with-unit:focus-within span {
+    background-color: var(--color-yellow-green)
+    
+}
+
+.radio-option input[type="radio"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 18px;
+    height: 18px;
+    border: 2px solid var(--color-dark-blue);
+    border-radius: 50%;
+    position: relative;
+    cursor: pointer;
+    vertical-align: middle;
+    align-content: center;
+    margin:0px;
+  }
+
+  .radio-option input[type="radio"]:checked {
+    border-color: var(--color-yellow-green);
+  }
+  
+  /* Create the inner circle when checked */
+  .radio-option input[type="radio"]:checked::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: var(--color-yellow-green);
+  }
+  
+
+  .results-heading {
+    font-family: 'Plus-Jakarta-Sans-Bold';
+    font-size: 25;
+    font-style: bold;
+    font-weight: 600;
+    margin: 0 0 15px 0;
+    color: white;
+  }
+  
+  .results-description {
+    font-family: 'Plus-Jakarta-Sans-Medium';
+    font-size: 14px;
+    line-height: 1.5;
+    color: #a0adb8;
+    margin-bottom: 30px;
+    max-width: 550px;
+  }
+  
+  .results-box {
+    background-color: #1e3446;
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  }
+  
+
+  .highlight-bar {
+    height: 4px;
+    background-color: #e9eb3d; /* Bright yellow */
+    width: 100%;
+  }
+  
+
+  .results-content {
+    padding: 25px 30px;
+  }
+  
+
+  .label {
+    font-size: 16px;
+    color: #a0adb8;
+    margin-bottom: 10px;
+  }
+  
+
+  .amount.primary {
+    font-family: 'Plus-Jakarta-Sans-Bold';
+    font-size: 48px;
+    font-weight: 700;
+    color: #e9eb3d; /* Bright yellow */
+    margin: 0;
+  }
+  
+
+  .amount.secondary {
+    font-family: 'Plus-Jakarta-Sans-Medium';
+    font-size: 32px;
+    font-weight: 700;
+    color: white;
+    margin: 0;
+  }
+  
+
+  .divider {
+    border: none;
+    height: 1px;
+    background-color: #2a4358;
+    margin: 25px 0;
+  }
+  
+
+  .monthly-section,
+  .total-section {
+    margin: 0;
+  }
+  
+
+  .monthly-section {
+    margin-bottom: 10px;
+  }
+  
+
+.error-message{
+    font-family: 'Plus-Jakarta-Sans-Medium';
+    color: red;
+    font-size: 11px;
+}
+
+
+@media (max-width: 700px) {
+
+    body,html {
+        overflow: scroll;
+        margin:0px;
+    }
+
+    #calculator-container {
+        margin-top: 500px;
+        flex-direction: column;
+        width: 100%;
+        
+    }
+
+    #input-section {
+
+        width: 100%
+    }
+
+    #header-section {
+        display: block;
+    }
+
+    #results-section{
+        border-radius: 0px !important;
+    }
+
+    .input-row{
+        flex-direction: column;
+    }
+    .input-row .input-group{
+        flex: 0 0 auto; /* Don't grow, don't shrink, respect width */
+        width:100%; /* Replace x with your desired percentage */
+    
+    }
+
+    #calculate-button{
+        width:100%;
+    }
+}

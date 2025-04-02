@@ -1,0 +1,93 @@
+.results-heading {
+    font-size: 28px;
+    font-weight: 600;
+    margin: 0 0 15px 0;
+    color: white;
+  }
+  
+  /* Description text */
+  .results-description {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #a0adb8;
+    margin-bottom: 30px;
+    max-width: 550px;
+  }
+  
+  /* Results box styling */
+  .results-box {
+    background-color: #1e3446;
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  }
+  
+  /* Yellow highlight bar at top */
+  .highlight-bar {
+    height: 4px;
+    background-color: #e9eb3d; /* Bright yellow */
+    width: 100%;
+  }
+  
+  /* Content padding */
+  .results-content {
+    padding: 25px 30px;
+  }
+  
+  /* Section labels */
+  .label {
+    font-size: 16px;
+    color: #a0adb8;
+    margin-bottom: 10px;
+  }
+  
+  /* Amount styling - primary (large amount) */
+  .amount.primary {
+    font-size: 48px;
+    font-weight: 700;
+    color: #e9eb3d; /* Bright yellow */
+    margin: 0;
+  }
+  
+  /* Amount styling - secondary (smaller amount) */
+  .amount.secondary {
+    font-size: 32px;
+    font-weight: 700;
+    color: white;
+    margin: 0;
+  }
+  
+  /* Divider line */
+  .divider {
+    border: none;
+    height: 1px;
+    background-color: #2a4358;
+    margin: 25px 0;
+  }
+  
+  /* Section spacing */
+  .monthly-section,
+  .total-section {
+    margin: 0;
+  }
+  
+  /* Spacing between sections */
+  .monthly-section {
+    margin-bottom: 10px;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 480px) {
+    .amount.primary {
+      font-size: 38px;
+    }
+    
+    .amount.secondary {
+      font-size: 26px;
+    }
+    
+    .results-content {
+      padding: 20px;
+    }
+  }
